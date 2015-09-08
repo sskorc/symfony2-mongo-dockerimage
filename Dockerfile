@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5.6.12-fpm
 
 RUN apt-get update \
     && curl -sL https://deb.nodesource.com/setup | bash - \
