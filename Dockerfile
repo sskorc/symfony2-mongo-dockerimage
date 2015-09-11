@@ -2,8 +2,7 @@ FROM php:5.6.12-fpm
 
 RUN apt-get update \
     && curl -sL https://deb.nodesource.com/setup | bash - \
-    && apt-get install -y git libssl-dev zlib1g-dev libicu-dev g++ nodejs \
-    && npm install -g grunt-cli \
+    && apt-get install -y git libssl-dev zlib1g-dev libicu-dev g++ \
     && pecl install mongo \
     && echo extension=mongo.so > /usr/local/etc/php/conf.d/mongo.ini \
     && pecl install xdebug \
